@@ -82,7 +82,7 @@ func (m Migrations) M_%s_%s(tx *gorm.DB) (*gormigrate.Migration) {
 			return tx.AutoMigrate(&NewModel{}).Error
 		},
 		Rollback: func(tx *gorm.DB) error {
-			return tx.DropTable("newmodels").Error
+			return tx.DropTable("new_models").Error
 		},
 	}
 }
